@@ -1,0 +1,2409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Institute of Digital Risk — training, deploying and developing the next generation of digital risk practitioners across cyber, AI and technology risk."/>
+<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAAAIADKAAAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAJFJREFUeJxjYBj04H+F3H988oykaGTseIShHkOAoI1ohsA5C2wY/sfbyOHTCwd37z5iUFkN0cuCLLHwyCMGBgYGBrhB7Q8vwyUr5XXv3n2EYRgTNhsWHnmEqhndMEIGkAJoZ8BCW0ZdZP7dMFQ+DGBE4wIbBpRotJFElYeFPk4D0A1CNgBdM1HgTigD3oQ18AAAkoIqnM5fKhcAAAAASUVORK5CYII="/>
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABA0lEQVR4nO2WuxHCMBBEzwxNkJiE1B2YMiA1ZUAFUAaOKQN34BQFqBERmUFCd159ApjRRh75pH2zOskmKipKlDnWJmV+ldO4uujg9Ra5zKVxSUHEIQZoGlBR7D4jEGJBaoMhIGwP5DKfW+uL7NqS6do6l7clpTRtbrbn0lfYD5qIiHKBKKXZd14AFyQWRjKGAHwwFsj5Ob6fT+sGNf2UtweQid3djO6Y2lfN3Dy3B6Juwpz6X4B+a8eNxO8T3IQcRLtKWeEHtoC9o9HTgCbgdv8kNoHDEP+zgpoTgZ9jKQ0pAck4CEAC4QAQ82AAH4gLgBpPijoFXH+EmmfRY4edlqIiTi8He1PLN2BGIwAAAABJRU5ErkJggg=="/>
+  <link rel="apple-touch-icon" sizes="256x256" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAHz0lEQVR4nO3dPZocVxmG4ZIvNkFiEqfsQCwDUrMMWAEsw469DLwDUiZAGxGB56BSz3Srq7uqzvdz36kDV5/S++hoxtYsCwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO/7/LfvP89+Bub5MPsBmOO94X/45ye/Hpr5bvYDcL5rv+u7DfSj+I1sGbjbQA9ecgPP/M4uBLV5uYXteaUXgpp8DaCovf887+sDNal6MWcM1W2gDi+yiBm/QwtBfl5gcrOv5iKQm5eX2OzxrwlBTl5aQpGGf0kIcvGyEok8/EtCkINvAyaRafzLku95u1Lp4CoMyW0gLi8mqArDvyQE8XghwVQc/poIxOJlBFJ9/GtCEIOXEECn4V8Sgrkc/kSdh78mAvM4+AkM/31CcD4HfjLj/zYhOI+DPonhbycEx3PABzP854jAsRzugYx/P0JwDId6AMM/jhDsy2HuyPDPIQL7cZA7MPw5hOB5DvBJxj+fEDzOwT3I8OMRgu0c2EaGH5sIbOOw7mT4uQjBfRzSHYw/LyG4zeHcYPg1iMB1DuYdhl+TELzlQC4Yf31C8IWDeGX4/QiBABh+c90j0PbDGz5rXUPQ8kMbP9d0C0GrD2v43KNTBFp8UMPnER1CUPoDGj57qByCsj8d2PjZS+VfS+XKVvllMV+120CZD2P4nKlKCEp8CONnluwhSP3whk8EmSOQ8sENn4gyhiDVAxs+GWQKQZpvAxo/WWT6tRq+VJkOEy5Fvw2EfTjDp5KoIQj3UIZPZdFCEOprAMZPddF+jYeo0U8fl88/fvx+9mPAaV5ePi0//DJ/f7+b/QDDz79+WpZlWYSAyl5ePs1+hK+ECcAgBFQUbfhDuAAMQkAFUYc/hA3AIARkFH34Q/gADEJABlmGP6QJwCAERJRt+EO6AAxCQARZhz+kDcAgBMyQffhD+gAMQsAZqgx/KBOAQQg4QrXhD+UCMAgBe6g6/KFsAAYh4BHVhz+UD8AgBNyjy/CHNgEYhID3dBv+0C4AgxCwLH2HP7QNwCAEPXUf/tA+AIMQ9GD4XxOAC0JQk+G/TwCuEIIaDP82AfgGIcjJ8O8jAHcSghwMfxsB2EgIYjL8xwjAg4QgBsN/jgA8aYRgWcTgTIa/DwHYUZpbwT/++++r/+zvf/jjiU+ymeHva/pPJlmW334y0OxnOEKoENwa/TWBYlBx+BF+MtD0B1iWugEYpobgkeFfmhiCisMfBOBV9QAMp4dgj/EPJ0eg8vAHAXjVJQDDKSHYc/zDCRHoMPxBAF51C8BwWAiOGP9wUAQ6DX8QgFddAzDsGoIjxz/sGIGOwx8E4FX3AAxPh+CM8Q9PRqDz8IcIAfDfAQSS5r8jeILhxzK9QMviBnDNphCc+bv/sOEWYPhvuQFwU4UbgeHHJgAJZAyB4ecw/QqyLP4IsNWbEMy4/g8Xfwww/Pv5IwAPiXgjMPycBCCx/4dg4jMYfm7fzX4AYB4BgMYEABoTAGhMAAr4+U8fpvyFHS9/mfPvZT8CAI0JADQmAEWc/ccA1/8aBAAaE4BCzroF+N2/DgEo5ugIGH8tAlDQUREw/noEoKi9I2D8NQlAYXtFwPjr8r8DFzci8OO/Pm/+S0MMvz4BaGJ9G7gVA6PvRQAaWsfg4+9nPgmz+RoANCYA0JgAQGMCAI0JADQmANCYAEBjAgCNCQA0JgDQmABAYwIAjQkANCYA0JgAQGMCAI0JADQmANCYAEBjAgCNCQA0JgDQmABAYx9mP8DaTx+Xz7OfoRs/F+B8P/wSZ3ehbgB//TXOwcARIo1/WYLdANbcBs7hBnCOaMMfQj7UmhAcSwCOFXX4Q+iHWxOCYwjAMaIPfwj1NYBbfH2ALLKMf1kS3QDW3Ab24wawn0zDH9I98JoQPE8Anpdx+EPaB18TgscJwHMyj39ZigRgWUTgUQLwmOzDH0p8iDUh2EYAtqky/KHUh1kTgvsIwH2qDX9I823ArXzbkL1UHf+yFL4BrLkNXOcGcF3l4Q/lP+CaELwlAG91GP7Q5oOuCcEXAvC1TuNflqYBWBYRGATgN92GP7T80GvdQ9A9AF2HP7T+8GtdQ9A5AN3HvywC8Ea3EHQMgOF/4SDe0SkCnQJg+G85kBs6hKBDAAz/Ogdzh8ohqB4A47/N4dypagSqBsDw7+OQNqoWgmoBMPxtHNaDqoSgUgCMfzsH9qTsIagQAMN/nIPbQeYIZA6A4T/PAe4oYwgyBsDw9+MgD5ApBNkCYPz7cpgHyhCCLAEw/GM41INFj0D0ABj+sRzuSaKGIHIAjP94Dvhk0UIQMQCGfx4HPUGkCEQKgOGfz4FPFCEEEQJg+PM4+ABmhmB2AIx/LocfyIwQzAqA4cfgJQRzdgTODoDhx+JlBHVWCM4MgPHH44UEd3QIzgiA4cflxSRxVAiODIDhx1f2pwNXk+2nHRt/Dl5SQnveBva+ARh+Ll5WYnuEYK8AGH5OXlpyz0bg2QAYfm5eXhGPhuCZABh/fl5gMVtD8EgADL8OL7Koe0OwJQCGX49vAxa197cNjb8mL7WBW7eBb90ADL82L7eR90JwLQCG34OX3NA6BJcBMPxefA2goWtfHzB+aOY/f57/15IBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACE9D8UdJ/tWh9EcwAAAABJRU5ErkJggg=="/>
+  <meta name="theme-color" content="#ff6500"/>
+  <title>Institute of Digital Risk | IDR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+<style>
+/* ================================================================
+   TOKENS & RESET
+================================================================ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+button,input,select,textarea{font-family:inherit;font-size:inherit}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+
+:root{
+  /* Palette */
+  --c-bg:        #060608;
+  --c-surface:   #0d0d10;
+  --c-raised:    #131317;
+  --c-border:    rgba(255,255,255,0.07);
+  --c-border-hi: rgba(255,255,255,0.14);
+  --c-text:      #f0f0f0;
+  --c-muted:     #888899;
+  --c-faint:     #3a3a4a;
+  --c-orange:    #ff6500;
+  --c-orange-lt: #ff8533;
+  --c-orange-glow: rgba(255,101,0,0.15);
+  --c-white:     #ffffff;
+
+  /* Type */
+  --ff-display: 'Bebas Neue', sans-serif;
+  --ff-body:    'Manrope', sans-serif;
+  --ff-mono:    'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --nav-h:     72px;
+  --wrap:      1200px;
+  --section-y: 140px;
+  --r:         3px;
+}
+
+/* ================================================================
+   BASE
+================================================================ */
+body{
+  font-family: var(--ff-body);
+  background: var(--c-bg);
+  color: var(--c-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Custom cursor */
+#cursor{
+  position: fixed;
+  top: 0; left: 0;
+  width: 10px; height: 10px;
+  margin-top: -5px; margin-left: -5px;
+  background: var(--c-orange);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  will-change: left, top;
+  transition: width 0.25s ease, height 0.25s ease,
+              margin 0.25s ease, background 0.25s ease, opacity 0.3s ease;
+}
+#cursor-ring{
+  position: fixed;
+  top: 0; left: 0;
+  width: 36px; height: 36px;
+  margin-top: -18px; margin-left: -18px;
+  border: 1.5px solid rgba(255,101,0,0.55);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0;
+  will-change: left, top;
+  transition: width 0.35s cubic-bezier(0.22,1,0.36,1),
+              height 0.35s cubic-bezier(0.22,1,0.36,1),
+              margin 0.35s cubic-bezier(0.22,1,0.36,1),
+              border-color 0.3s ease, opacity 0.3s ease;
+}
+/* hover expand */
+body.cursor-hover #cursor      { width:18px; height:18px; margin-top:-9px; margin-left:-9px; background: var(--c-orange-lt); }
+body.cursor-hover #cursor-ring { width:54px; height:54px; margin-top:-27px; margin-left:-27px; border-color: var(--c-orange); }
+
+/* Scrollbar */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:var(--c-bg)}
+::-webkit-scrollbar-thumb{background:var(--c-orange);border-radius:2px}
+
+/* ================================================================
+   UTILITY
+================================================================ */
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
+.label-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--ff-mono);font-size:10px;font-weight:500;
+  letter-spacing:0.2em;text-transform:uppercase;color:var(--c-orange);
+}
+.label-tag::before{
+  content:'';display:block;width:20px;height:1px;background:var(--c-orange);
+}
+.section-title{
+  font-family:var(--ff-display);
+  font-size:clamp(52px,6vw,96px);
+  line-height:0.95;
+  letter-spacing:0.02em;
+  color:var(--c-white);
+}
+.body-lg{font-size:18px;font-weight:300;color:var(--c-muted);line-height:1.75;max-width:560px}
+.divider{width:100%;height:1px;background:var(--c-border);margin:0}
+
+/* ================================================================
+   SCROLL REVEAL SYSTEM
+================================================================ */
+/* Reveal — elements stay visible until JS opts them in */
+body.js-ready [data-reveal]{
+  opacity:0;
+  transform:translateY(40px);
+  transition:opacity 0.8s cubic-bezier(0.22,1,0.36,1),
+             transform 0.8s cubic-bezier(0.22,1,0.36,1);
+  will-change:opacity,transform;
+}
+body.js-ready [data-reveal="left"] {transform:translateX(-40px)}
+body.js-ready [data-reveal="right"]{transform:translateX(40px)}
+body.js-ready [data-reveal="scale"]{transform:scale(0.92);opacity:0}
+[data-reveal].is-visible{opacity:1 !important;transform:none !important;transition:opacity 0.8s cubic-bezier(0.22,1,0.36,1),transform 0.8s cubic-bezier(0.22,1,0.36,1)}
+[data-delay="1"]{transition-delay:0.1s}
+[data-delay="2"]{transition-delay:0.2s}
+[data-delay="3"]{transition-delay:0.3s}
+[data-delay="4"]{transition-delay:0.4s}
+[data-delay="5"]{transition-delay:0.5s}
+[data-delay="6"]{transition-delay:0.6s}
+
+/* ================================================================
+   NAVIGATION
+================================================================ */
+#navbar{
+  position:fixed;top:0;left:0;right:0;
+  height:var(--nav-h);
+  z-index:500;
+  transition:background 0.4s, border-color 0.4s, backdrop-filter 0.4s;
+  border-bottom:1px solid transparent;
+}
+#navbar.scrolled{
+  background:rgba(6,6,8,0.85);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border-bottom-color:var(--c-border);
+}
+.nav-inner{
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* Logo */
+.nav-logo{display:flex;align-items:center;gap:14px;}
+.nav-logo-mark{
+  position:relative;
+  width:38px;height:38px;
+  flex-shrink:0;
+}
+.logo-svg{width:100%;height:100%}
+.nav-logo-text{
+  display:flex;flex-direction:column;line-height:1;
+}
+.logo-abbr{
+  font-family:var(--ff-display);
+  font-size:22px;
+  color:var(--c-white);
+  letter-spacing:0.06em;
+}
+.logo-full{
+  font-family:var(--ff-mono);
+  font-size:8px;
+  color:var(--c-muted);
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  margin-top:2px;
+}
+
+/* Nav links */
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:2px;
+}
+.nav-link{
+  font-family:var(--ff-mono);
+  font-size:11px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--c-muted);
+  padding:8px 16px;
+  border-radius:var(--r);
+  transition:color 0.2s, background 0.2s;
+  ;
+}
+.nav-link:hover{color:var(--c-white);background:rgba(255,255,255,0.05)}
+.nav-link.active{color:var(--c-orange)}
+
+/* CTA button */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--ff-mono);
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  padding:12px 24px;
+  border-radius:var(--r);
+  transition:all 0.25s cubic-bezier(0.22,1,0.36,1);
+  ;
+  position:relative;
+  overflow:hidden;
+}
+.btn::before{
+  content:'';
+  position:absolute;inset:0;
+  background:rgba(255,255,255,0.06);
+  transform:translateX(-101%);
+  transition:transform 0.35s cubic-bezier(0.22,1,0.36,1);
+}
+.btn:hover::before{transform:translateX(0)}
+
+.btn-primary{
+  background:var(--c-orange);
+  color:var(--c-white);
+  border:1px solid var(--c-orange);
+}
+.btn-primary:hover{
+  background:var(--c-orange-lt);
+  border-color:var(--c-orange-lt);
+  transform:translateY(-2px);
+  box-shadow:0 12px 32px rgba(255,101,0,0.35);
+}
+.btn-ghost{
+  background:transparent;
+  color:var(--c-muted);
+  border:1px solid var(--c-border-hi);
+}
+.btn-ghost:hover{
+  color:var(--c-white);
+  border-color:rgba(255,255,255,0.3);
+  transform:translateY(-2px);
+}
+
+/* Hamburger */
+.hamburger{
+  display:none;
+  flex-direction:column;gap:5px;
+  background:none;border:none;
+  padding:4px;;
+}
+.hamburger span{
+  display:block;width:22px;height:1.5px;
+  background:var(--c-muted);
+  transition:all 0.3s;
+}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);background:var(--c-orange)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);background:var(--c-orange)}
+
+/* Mobile menu */
+.mobile-nav{
+  display:none;
+  position:fixed;
+  top:var(--nav-h);left:0;right:0;bottom:0;
+  background:rgba(6,6,8,0.98);
+  backdrop-filter:blur(24px);
+  z-index:499;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  padding:40px;
+}
+.mobile-nav.open{display:flex}
+.mobile-nav-link{
+  font-family:var(--ff-display);
+  font-size:52px;
+  letter-spacing:0.04em;
+  color:var(--c-faint);
+  transition:color 0.2s;
+  ;
+}
+.mobile-nav-link:hover{color:var(--c-orange)}
+.mobile-nav-bottom{
+  position:absolute;bottom:48px;
+  display:flex;gap:12px;
+}
+
+/* ================================================================
+   HERO
+================================================================ */
+#hero{
+  position:relative;
+  min-height:100vh;
+  padding-top:var(--nav-h);
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+
+/* Canvas background */
+#hero-canvas{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  pointer-events:none;
+  opacity:0.6;
+}
+
+/* Noise grain overlay */
+#hero::before{
+  content:'';
+  position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity:0.4;
+  pointer-events:none;
+  z-index:1;
+}
+
+/* Orange glow blobs */
+.hero-glow{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(80px);
+  pointer-events:none;
+}
+.hero-glow-1{
+  width:600px;height:400px;
+  top:-100px;right:-100px;
+  background:radial-gradient(ellipse, rgba(255,101,0,0.12) 0%, transparent 70%);
+}
+.hero-glow-2{
+  width:400px;height:400px;
+  bottom:100px;left:10%;
+  background:radial-gradient(ellipse, rgba(255,101,0,0.07) 0%, transparent 70%);
+}
+
+.hero-inner{
+  position:relative;z-index:2;
+  width:100%;
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:80px;
+  align-items:center;
+  padding:60px 0 80px;
+}
+
+/* Hero eyebrow */
+.hero-eyebrow{
+  display:flex;align-items:center;gap:16px;
+  margin-bottom:32px;
+  animation: fadeDown 0.8s 0.2s both;
+}
+.eyebrow-dot{
+  width:8px;height:8px;
+  background:var(--c-orange);
+  border-radius:50%;
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(255,101,0,0.4)}
+  50%{box-shadow:0 0 0 8px rgba(255,101,0,0)}
+}
+.eyebrow-text{
+  font-family:var(--ff-mono);
+  font-size:11px;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--c-orange);
+}
+
+/* Hero headline */
+.hero-headline{
+  font-family:var(--ff-display);
+  font-size:clamp(72px,9vw,148px);
+  line-height:0.9;
+  letter-spacing:0.01em;
+  color:var(--c-white);
+  animation: fadeUp 0.9s 0.3s both;
+  margin-bottom:32px;
+}
+.hero-headline .accent{color:var(--c-orange)}
+.hero-headline .outline{
+  -webkit-text-stroke:1px rgba(255,255,255,0.35);
+  color:transparent;
+}
+
+.hero-sub{
+  font-size:17px;
+  font-weight:300;
+  color:var(--c-muted);
+  line-height:1.8;
+  max-width:520px;
+  animation: fadeUp 0.9s 0.45s both;
+  margin-bottom:48px;
+}
+.hero-sub strong{color:var(--c-text);font-weight:600}
+
+.hero-actions{
+  display:flex;gap:16px;flex-wrap:wrap;
+  animation: fadeUp 0.9s 0.6s both;
+}
+
+/* Trust row */
+.hero-trust{
+  display:flex;align-items:center;gap:28px;
+  margin-top:64px;
+  padding-top:40px;
+  border-top:1px solid var(--c-border);
+  animation: fadeUp 0.9s 0.75s both;
+}
+.trust-item{
+  display:flex;flex-direction:column;gap:4px;
+}
+.trust-val{
+  font-family:var(--ff-display);
+  font-size:30px;
+  letter-spacing:0.04em;
+  color:var(--c-orange);
+  line-height:1;
+}
+.trust-label{
+  font-family:var(--ff-mono);
+  font-size:9px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--c-muted);
+}
+.trust-sep{
+  width:1px;height:36px;
+  background:var(--c-border-hi);
+  flex-shrink:0;
+}
+
+/* Hero visual panel */
+.hero-visual{
+  position:relative;
+  animation: fadeLeft 1s 0.5s both;
+}
+
+.risk-card{
+  background:var(--c-surface);
+  border:1px solid var(--c-border-hi);
+  border-radius:8px;
+  overflow:hidden;
+  position:relative;
+}
+.risk-card-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 18px;
+  border-bottom:1px solid var(--c-border);
+  background:var(--c-raised);
+}
+.risk-card-dots{display:flex;gap:6px}
+.risk-card-dots span{
+  width:10px;height:10px;border-radius:50%;
+}
+.rcd-1{background:#ff5f57}
+.rcd-2{background:#febc2e}
+.rcd-3{background:#28c840}
+
+.risk-card-label{
+  font-family:var(--ff-mono);
+  font-size:10px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--c-muted);
+}
+
+.risk-card-body{padding:24px 18px;display:flex;flex-direction:column;gap:14px}
+
+/* Threat gauge bars */
+.gauge-row{
+  display:flex;align-items:center;gap:12px;
+}
+.gauge-label{
+  font-family:var(--ff-mono);
+  font-size:10px;
+  letter-spacing:0.08em;
+  color:var(--c-muted);
+  width:80px;flex-shrink:0;
+}
+.gauge-track{
+  flex:1;height:6px;
+  background:var(--c-faint);
+  border-radius:3px;
+  overflow:hidden;
+}
+.gauge-fill{
+  height:100%;
+  border-radius:3px;
+  width:0;
+  transition:width 1.8s cubic-bezier(0.22,1,0.36,1);
+}
+.gauge-val{
+  font-family:var(--ff-mono);
+  font-size:10px;
+  color:var(--c-muted);
+  width:36px;text-align:right;
+}
+
+/* Status indicators */
+.status-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;
+  margin-top:8px;
+}
+.status-item{
+  background:var(--c-raised);
+  border:1px solid var(--c-border);
+  border-radius:4px;
+  padding:12px 14px;
+}
+.status-name{
+  font-family:var(--ff-mono);
+  font-size:9px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--c-muted);
+  margin-bottom:6px;
+}
+.status-badge{
+  display:inline-flex;align-items:center;gap:5px;
+  font-family:var(--ff-mono);
+  font-size:10px;
+  font-weight:500;
+}
+.status-badge .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.s-green .dot{background:#28c840}
+.s-green{color:#28c840}
+.s-orange .dot{background:var(--c-orange)}
+.s-orange{color:var(--c-orange-lt)}
+.s-blue .dot{background:#4a9eff}
+.s-blue{color:#4a9eff}
+
+/* Floating chips on visual */
+.vis-chip{
+  position:absolute;
+  background:rgba(13,13,16,0.92);
+  border:1px solid var(--c-border-hi);
+  border-radius:6px;
+  padding:8px 14px;
+  backdrop-filter:blur(8px);
+  font-family:var(--ff-mono);
+  font-size:10px;
+  color:var(--c-orange-lt);
+  letter-spacing:0.1em;
+  animation:floatChip 5s ease-in-out infinite;
+  white-space:nowrap;
+}
+.vis-chip-1{top:-16px;left:-30px;animation-delay:0s}
+.vis-chip-2{bottom:-12px;right:-20px;animation-delay:2s}
+@keyframes floatChip{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+
+/* ── hero anim keyframes */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:none}}
+@keyframes fadeLeft{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:none}}
+
+/* ================================================================
+   MARQUEE / TICKER
+================================================================ */
+.ticker-section{
+  border-top:1px solid var(--c-border);
+  border-bottom:1px solid var(--c-border);
+  padding:0;
+  overflow:hidden;
+  background:var(--c-surface);
+}
+.ticker-track{
+  display:flex;
+  width:max-content;
+  animation:ticker 30s linear infinite;
+}
+.ticker-track:hover{animation-play-state:paused}
+.ticker-item{
+  display:flex;align-items:center;gap:0;
+  padding:16px 32px;
+  font-family:var(--ff-mono);
+  font-size:11px;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--c-muted);
+  white-space:nowrap;
+  border-right:1px solid var(--c-border);
+  transition:color 0.2s;
+}
+.ticker-item:hover{color:var(--c-orange)}
+.ticker-item span{color:var(--c-orange);margin-right:12px}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ================================================================
+   ABOUT
+================================================================ */
+#about{padding:var(--section-y) 0;position:relative}
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:100px;
+  align-items:start;
+}
+.about-left{}
+.about-left .section-title{margin:16px 0 32px;white-space:nowrap}
+.about-body p{
+  font-size:16px;font-weight:300;
+  color:var(--c-muted);
+  line-height:1.85;
+  margin-bottom:20px;
+}
+.about-body p strong{color:var(--c-text);font-weight:600}
+
+.about-badge{
+  display:inline-flex;align-items:center;gap:12px;
+  margin-top:32px;
+  padding:14px 20px;
+  background:var(--c-surface);
+  border:1px solid var(--c-border-hi);
+  border-left:3px solid var(--c-orange);
+  border-radius:var(--r);
+}
+.about-badge .badge-icon{font-size:20px}
+.about-badge p{
+  font-size:13px;color:var(--c-muted);margin:0;
+}
+.about-badge strong{color:var(--c-text)}
+
+/* Stat grid */
+.stat-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:var(--c-border);
+  border:1px solid var(--c-border);
+  border-radius:8px;
+  overflow:hidden;
+}
+.stat-cell{
+  background:var(--c-surface);
+  padding:36px 28px;
+  position:relative;
+  overflow:hidden;
+  transition:background 0.3s;
+}
+.stat-cell:hover{background:var(--c-raised)}
+.stat-cell::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:2px;
+  background:var(--c-orange);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform 0.4s cubic-bezier(0.22,1,0.36,1);
+}
+.stat-cell:hover::before{transform:scaleX(1)}
+.stat-num{
+  font-family:var(--ff-display);
+  font-size:56px;
+  letter-spacing:0.02em;
+  color:var(--c-orange);
+  line-height:1;
+  margin-bottom:8px;
+}
+.stat-desc{
+  font-family:var(--ff-mono);
+  font-size:10px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--c-muted);
+  line-height:1.5;
+}
+
+/* ================================================================
+   PIPELINE (MODEL)
+================================================================ */
+#pipeline{
+  padding:var(--section-y) 0;
+  background:var(--c-surface);
+  border-top:1px solid var(--c-border);
+  border-bottom:1px solid var(--c-border);
+}
+.pipeline-header{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:end;
+  margin-bottom:80px;
+}
+.pipeline-steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:var(--c-border);
+  border:1px solid var(--c-border);
+  border-radius:8px;
+  overflow:hidden;
+  counter-reset:step;
+}
+.pipeline-step{
+  background:var(--c-bg);
+  padding:40px 28px;
+  position:relative;
+  overflow:hidden;
+  transition:background 0.35s;
+  counter-increment:step;
+}
+.pipeline-step:hover{background:var(--c-raised)}
+.pipeline-step-num{
+  font-family:var(--ff-display);
+  font-size:80px;
+  letter-spacing:0.01em;
+  color:var(--c-faint);
+  line-height:1;
+  margin-bottom:20px;
+  transition:color 0.3s;
+}
+.pipeline-step:hover .pipeline-step-num{color:rgba(255,101,0,0.2)}
+.pipeline-step-icon{
+  font-size:24px;margin-bottom:16px;
+}
+.pipeline-step h3{
+  font-family:var(--ff-display);
+  font-size:32px;
+  letter-spacing:0.04em;
+  color:var(--c-white);
+  margin-bottom:12px;
+}
+.pipeline-step p{
+  font-size:13px;font-weight:300;
+  color:var(--c-muted);
+  line-height:1.7;
+}
+.pipeline-step-bar{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  height:3px;
+  background:var(--c-orange);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform 0.5s cubic-bezier(0.22,1,0.36,1);
+}
+.pipeline-step:hover .pipeline-step-bar{transform:scaleX(1)}
+
+/* ================================================================
+   SERVICES
+================================================================ */
+#services{padding:var(--section-y) 0}
+.services-intro{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:end;
+  margin-bottom:80px;
+}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--c-border);
+  border:1px solid var(--c-border);
+  border-radius:8px;
+  overflow:hidden;
+}
+.service-card{
+  background:var(--c-surface);
+  padding:48px 36px;
+  position:relative;
+  overflow:hidden;
+  transition:background 0.35s;
+}
+.service-card:hover{background:var(--c-raised)}
+
+/* Animated number watermark */
+.card-watermark{
+  position:absolute;
+  top:-10px;right:-4px;
+  font-family:var(--ff-display);
+  font-size:160px;
+  color:rgba(255,255,255,0.02);
+  line-height:1;
+  pointer-events:none;
+  transition:color 0.4s;
+  letter-spacing:0;
+}
+.service-card:hover .card-watermark{color:rgba(255,101,0,0.04)}
+
+.card-tag{
+  font-family:var(--ff-mono);
+  font-size:10px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--c-orange);
+  margin-bottom:28px;
+}
+.card-icon-wrap{
+  width:52px;height:52px;
+  background:var(--c-orange-glow);
+  border:1px solid rgba(255,101,0,0.2);
+  border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:24px;
+  transition:background 0.3s, transform 0.3s;
+}
+.service-card:hover .card-icon-wrap{
+  background:rgba(255,101,0,0.2);
+  transform:scale(1.05);
+}
+.card-icon-wrap svg{width:24px;height:24px;stroke:var(--c-orange)}
+
+.service-card h3{
+  font-family:var(--ff-display);
+  font-size:36px;
+  letter-spacing:0.04em;
+  color:var(--c-white);
+  margin-bottom:16px;
+  line-height:1.1;
+}
+.service-card p{
+  font-size:14px;font-weight:300;
+  color:var(--c-muted);
+  line-height:1.75;
+  margin-bottom:28px;
+}
+.card-pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{
+  font-family:var(--ff-mono);
+  font-size:9px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--c-muted);
+  border:1px solid var(--c-border-hi);
+  padding:5px 10px;
+  border-radius:2px;
+  transition:color 0.2s, border-color 0.2s;
+}
+.service-card:hover .pill{color:var(--c-orange);border-color:rgba(255,101,0,0.3)}
+
+/* ================================================================
+   COMMUNITY
+================================================================ */
+#community{
+  padding:var(--section-y) 0;
+  background:var(--c-surface);
+  border-top:1px solid var(--c-border);
+  border-bottom:1px solid var(--c-border);
+}
+.community-grid{
+  display:grid;
+  grid-template-columns:5fr 7fr;
+  gap:100px;
+  align-items:start;
+}
+.community-left .section-title{margin:16px 0 28px}
+.community-left .body-lg{margin-bottom:48px}
+
+.sectors-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:32px}
+.sector-tag{
+  font-family:var(--ff-mono);
+  font-size:10px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--c-muted);
+  border:1px solid var(--c-border-hi);
+  padding:8px 14px;
+  border-radius:100px;
+  transition:all 0.25s;
+  ;
+}
+.sector-tag:hover{
+  color:var(--c-orange);
+  border-color:rgba(255,101,0,0.4);
+  background:var(--c-orange-glow);
+}
+
+/* Audience cards */
+.audience-stack{display:flex;flex-direction:column;gap:2px}
+.audience-card{
+  display:flex;align-items:flex-start;gap:20px;
+  padding:24px 28px;
+  background:var(--c-bg);
+  border:1px solid transparent;
+  border-radius:0;
+  transition:background 0.3s, border-color 0.3s, transform 0.3s;
+  ;
+}
+.audience-card:first-child{border-radius:8px 8px 0 0}
+.audience-card:last-child{border-radius:0 0 8px 8px}
+.audience-card:hover{
+  background:var(--c-raised);
+  border-color:var(--c-border-hi);
+  transform:translateX(6px);
+}
+.aud-icon{
+  width:44px;height:44px;flex-shrink:0;
+  background:var(--c-surface);
+  border:1px solid var(--c-border);
+  border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;
+  transition:background 0.3s, border-color 0.3s;
+}
+.audience-card:hover .aud-icon{
+  background:var(--c-orange-glow);
+  border-color:rgba(255,101,0,0.3);
+}
+.aud-title{
+  font-family:var(--ff-body);
+  font-weight:700;
+  font-size:15px;
+  color:var(--c-text);
+  margin-bottom:5px;
+}
+.aud-desc{
+  font-size:13px;font-weight:300;
+  color:var(--c-muted);
+  line-height:1.6;
+}
+
+/* ================================================================
+   TESTIMONIAL / SOCIAL PROOF
+================================================================ */
+#proof{
+  padding:var(--section-y) 0;
+  overflow:hidden;
+}
+.proof-header{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:end;
+  margin-bottom:64px;
+}
+.testimonials{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--c-border);
+  border:1px solid var(--c-border);
+  border-radius:8px;
+  overflow:hidden;
+}
+.testimonial{
+  background:var(--c-surface);
+  padding:40px 32px;
+  position:relative;
+  transition:background 0.3s;
+}
+.testimonial:hover{background:var(--c-raised)}
+.testimonial-quote{
+  font-size:38px;
+  color:var(--c-orange);
+  line-height:1;
+  font-family:Georgia, serif;
+  margin-bottom:16px;
+}
+.testimonial-text{
+  font-size:14px;font-weight:300;
+  color:var(--c-muted);
+  line-height:1.75;
+  font-style:italic;
+  margin-bottom:28px;
+}
+.testimonial-author{
+  display:flex;align-items:center;gap:14px;
+  padding-top:20px;
+  border-top:1px solid var(--c-border);
+}
+.author-avatar{
+  width:40px;height:40px;
+  border-radius:50%;
+  background:var(--c-faint);
+  border:2px solid var(--c-border-hi);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--ff-display);
+  font-size:16px;
+  color:var(--c-orange);
+  flex-shrink:0;
+}
+.author-name{
+  font-weight:700;font-size:13px;
+  color:var(--c-text);margin-bottom:2px;
+}
+.author-role{
+  font-family:var(--ff-mono);
+  font-size:9px;letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--c-muted);
+}
+
+/* Framework logos row */
+.frameworks{
+  margin-top:80px;
+  padding-top:60px;
+  border-top:1px solid var(--c-border);
+}
+.frameworks-label{
+  font-family:var(--ff-mono);
+  font-size:10px;letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--c-muted);
+  text-align:center;margin-bottom:40px;
+}
+.frameworks-row{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:0;
+  flex-wrap:wrap;
+}
+.framework-item{
+  padding:20px 36px;
+  border-right:1px solid var(--c-border);
+  font-family:var(--ff-display);
+  font-size:22px;
+  letter-spacing:0.1em;
+  color:var(--c-faint);
+  transition:color 0.3s;
+  ;
+}
+.framework-item:last-child{border-right:none}
+.framework-item:hover{color:var(--c-orange)}
+.framework-sub{
+  display:block;
+  font-family:var(--ff-mono);
+  font-size:8px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--c-faint);
+  margin-top:4px;
+  transition:color 0.3s;
+}
+.framework-item:hover .framework-sub{color:var(--c-muted)}
+
+/* ================================================================
+   CONTACT
+================================================================ */
+#contact{
+  padding:var(--section-y) 0;
+  background:var(--c-surface);
+  border-top:1px solid var(--c-border);
+}
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  gap:100px;
+  align-items:start;
+}
+.contact-left .section-title{margin:16px 0 24px}
+.contact-left .body-lg{margin-bottom:48px}
+
+.contact-detail{
+  display:flex;align-items:center;gap:14px;
+  padding:16px 0;
+  border-bottom:1px solid var(--c-border);
+}
+.contact-detail:first-of-type{border-top:1px solid var(--c-border)}
+.contact-detail-icon{
+  width:36px;height:36px;
+  background:var(--c-orange-glow);
+  border:1px solid rgba(255,101,0,0.2);
+  border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.contact-detail-icon svg{width:16px;height:16px;stroke:var(--c-orange)}
+.contact-detail-text{
+  font-family:var(--ff-mono);
+  font-size:12px;
+  letter-spacing:0.1em;
+  color:var(--c-muted);
+}
+.contact-detail-text strong{
+  display:block;font-size:9px;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--c-muted);
+  margin-bottom:4px;font-weight:400;
+}
+.contact-detail-text span{color:var(--c-text)}
+
+/* Form */
+.form-wrap{
+  background:var(--c-bg);
+  border:1px solid var(--c-border-hi);
+  border-radius:8px;
+  padding:48px 40px;
+}
+.form-wrap h3{
+  font-family:var(--ff-display);
+  font-size:36px;
+  letter-spacing:0.04em;
+  color:var(--c-white);
+  margin-bottom:8px;
+}
+.form-wrap .form-sub{
+  font-size:13px;color:var(--c-muted);
+  margin-bottom:36px;
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-group{margin-bottom:18px}
+.form-group label{
+  display:block;
+  font-family:var(--ff-mono);
+  font-size:9px;letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--c-muted);
+  margin-bottom:8px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  background:var(--c-surface);
+  border:1px solid var(--c-border);
+  border-radius:var(--r);
+  padding:13px 16px;
+  color:var(--c-text);
+  font-size:14px;
+  outline:none;
+  transition:border-color 0.25s, box-shadow 0.25s, background 0.25s;
+  appearance:none;
+  -webkit-appearance:none;
+  ;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  border-color:var(--c-orange);
+  background:rgba(255,101,0,0.04);
+  box-shadow:0 0 0 3px rgba(255,101,0,0.1);
+}
+.form-group textarea{resize:vertical;min-height:110px}
+.form-group select option{background:var(--c-surface)}
+
+.form-submit{
+  width:100%;
+  display:flex;align-items:center;justify-content:center;gap:12px;
+  font-family:var(--ff-mono);
+  font-size:12px;letter-spacing:0.14em;
+  text-transform:uppercase;
+  font-weight:500;
+  color:var(--c-white);
+  background:var(--c-orange);
+  border:1px solid var(--c-orange);
+  border-radius:var(--r);
+  padding:16px;
+  ;
+  transition:background 0.25s, transform 0.2s, box-shadow 0.25s;
+  position:relative;overflow:hidden;
+}
+.form-submit::before{
+  content:'';position:absolute;inset:0;
+  background:rgba(255,255,255,0.08);
+  transform:translateX(-101%);
+  transition:transform 0.3s cubic-bezier(0.22,1,0.36,1);
+}
+.form-submit:hover::before{transform:translateX(0)}
+.form-submit:hover{
+  background:var(--c-orange-lt);
+  transform:translateY(-2px);
+  box-shadow:0 10px 32px rgba(255,101,0,0.3);
+}
+.form-submit .arrow{
+  transition:transform 0.25s;
+}
+.form-submit:hover .arrow{transform:translateX(4px)}
+.form-note{
+  font-family:var(--ff-mono);
+  font-size:9px;letter-spacing:0.1em;
+  color:var(--c-muted);
+  text-align:center;
+  margin-top:16px;
+}
+
+/* ================================================================
+   FOOTER
+================================================================ */
+footer{
+  background:var(--c-bg);
+  border-top:1px solid var(--c-border);
+  padding:72px 0 36px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:2.5fr 1fr 1fr 1fr;
+  gap:60px;
+  padding-bottom:60px;
+  border-bottom:1px solid var(--c-border);
+  margin-bottom:32px;
+}
+.footer-brand-desc{
+  font-size:13px;font-weight:300;
+  color:var(--c-muted);
+  line-height:1.8;
+  margin-top:20px;max-width:260px;
+}
+.footer-col-title{
+  font-family:var(--ff-mono);
+  font-size:9px;letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--c-orange);
+  margin-bottom:20px;
+}
+.footer-col ul{display:flex;flex-direction:column;gap:10px}
+.footer-col a{
+  font-size:13px;font-weight:300;
+  color:var(--c-muted);
+  transition:color 0.2s, padding-left 0.2s;
+  ;
+}
+.footer-col a:hover{color:var(--c-text);padding-left:6px}
+
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;
+}
+.footer-copy{
+  font-family:var(--ff-mono);
+  font-size:10px;letter-spacing:0.12em;
+  color:var(--c-muted);
+}
+.footer-legal{
+  display:flex;gap:24px;
+}
+.footer-legal a{
+  font-family:var(--ff-mono);
+  font-size:10px;letter-spacing:0.12em;
+  color:var(--c-muted);
+  transition:color 0.2s;;
+}
+.footer-legal a:hover{color:var(--c-orange)}
+
+/* ================================================================
+   RESPONSIVE
+================================================================ */
+@media(max-width:1024px){
+  :root{--section-y:100px}
+  .hero-inner{grid-template-columns:1fr;gap:60px}
+  .hero-visual{display:none}
+  .about-grid,.contact-grid,.community-grid,.proof-header,
+  .pipeline-header,.services-intro{grid-template-columns:1fr;gap:48px}
+  .pipeline-steps{grid-template-columns:1fr 1fr}
+  .services-grid{grid-template-columns:1fr}
+  .testimonials{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
+}
+@media(max-width:768px){
+  :root{--nav-h:64px;--section-y:80px}
+  #cursor,#cursor-ring{display:none}
+  .nav-links,.nav-cta-wrap{display:none}
+  .hamburger{display:flex}
+  .hero-headline{font-size:clamp(56px,14vw,80px)}
+  .pipeline-steps{grid-template-columns:1fr}
+  .framework-item{padding:16px 20px;font-size:18px}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:16px;text-align:center}
+  .footer-legal{justify-content:center}
+  .hero-trust{flex-wrap:wrap;gap:20px}
+}
+@media(max-width:480px){
+  .wrap{padding:0 20px}
+  .form-wrap{padding:28px 20px}
+  .hero-headline{font-size:clamp(52px,16vw,72px)}
+}
+
+/* Accessibility */
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:0.01ms !important;transition-duration:0.01ms !important}
+  [data-reveal],[data-reveal].is-visible{opacity:1 !important;transform:none !important}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Custom cursor -->
+<div id="cursor" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+
+<!-- ================================================================
+     NAVIGATION
+================================================================ -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="wrap nav-inner">
+
+    <!-- Logo -->
+    <a href="#hero" class="nav-logo" aria-label="IDR Home">
+      <div class="nav-logo-mark">
+        <svg class="logo-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#ff6500"/><stop offset="100%" stop-color="#ff8533"/>
+            </linearGradient>
+            <linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#cc5200"/><stop offset="100%" stop-color="#993d00"/>
+            </linearGradient>
+            <linearGradient id="lg3" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#ff7219"/><stop offset="100%" stop-color="#e05c00"/>
+            </linearGradient>
+          </defs>
+          <polygon points="40,12 12,27 12,53 40,68 40,42" fill="url(#lg3)"/>
+          <polygon points="40,12 68,27 68,53 40,68 40,42" fill="url(#lg2)"/>
+          <polygon points="40,12 12,27 40,42 68,27" fill="url(#lg1)"/>
+          <path d="M40 20 L54 27 L54 40 Q54 50 40 55 Q26 50 26 40 L26 27 Z"
+                fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+          <circle cx="40" cy="38" r="3" fill="white" opacity="0.8"/>
+        </svg>
+      </div>
+      <div class="nav-logo-text">
+        <span class="logo-abbr">IDR</span>
+        <span class="logo-full">Institute of Digital Risk</span>
+      </div>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav-links" role="list">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#pipeline" class="nav-link">Model</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#community" class="nav-link">Community</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <!-- Desktop CTA -->
+    <div class="nav-cta-wrap">
+      <a href="#contact" class="btn btn-primary">Register Interest</a>
+    </div>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile nav -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+  <a href="#about" class="mobile-nav-link" data-mobile-link>About</a>
+  <a href="#pipeline" class="mobile-nav-link" data-mobile-link>Model</a>
+  <a href="#services" class="mobile-nav-link" data-mobile-link>Services</a>
+  <a href="#community" class="mobile-nav-link" data-mobile-link>Community</a>
+  <a href="#contact" class="mobile-nav-link" data-mobile-link>Contact</a>
+  <div class="mobile-nav-bottom">
+    <a href="#contact" class="btn btn-primary" data-mobile-link>Register Interest →</a>
+  </div>
+</nav>
+
+<!-- ================================================================
+     HERO
+================================================================ -->
+<main>
+<section id="hero" aria-label="Hero">
+  <!-- Canvas particle network -->
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+  <!-- Glow blobs -->
+  <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+  <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+
+  <div class="wrap hero-inner">
+
+    <!-- LEFT: copy -->
+    <div class="hero-copy">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        <span class="eyebrow-text">UK Based · Industry Led · Est. 2024</span>
+      </div>
+
+      <h1 class="hero-headline">
+        <span id="scramble-text">ADVANCING</span><br/>
+        THE FUTURE<br/>
+        OF <span class="accent">DIGITAL</span><br/>
+        <span class="outline">RISK.</span>
+      </h1>
+
+      <p class="hero-sub">
+        IDR trains, deploys and develops the next generation of
+        <strong>digital risk practitioners</strong> — combining academic rigour
+        with real-world industry practice across cyber, AI governance and
+        technology risk.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#services" class="btn btn-primary">
+          Explore Programs
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#about" class="btn btn-ghost">Learn More</a>
+      </div>
+
+      <!-- Trust proof row -->
+      <div class="hero-trust" aria-label="Key facts">
+        <div class="trust-item">
+          <span class="trust-val" data-count-to="100" data-count-suffix="%">0%</span>
+          <span class="trust-label">Industry Designed</span>
+        </div>
+        <div class="trust-sep" aria-hidden="true"></div>
+        <div class="trust-item">
+          <span class="trust-val" data-count-to="3" data-count-suffix="">0</span>
+          <span class="trust-label">Core Pillars</span>
+        </div>
+        <div class="trust-sep" aria-hidden="true"></div>
+        <div class="trust-item">
+          <span class="trust-val" data-count-to="4" data-count-suffix=" Frameworks">0</span>
+          <span class="trust-label">Global Standards</span>
+        </div>
+        <div class="trust-sep" aria-hidden="true"></div>
+        <div class="trust-item">
+          <span class="trust-val">Day 1</span>
+          <span class="trust-label">Deployment Ready</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: visual card -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="vis-chip vis-chip-1">⬡ ISO 27001 Aligned</div>
+      <div class="vis-chip vis-chip-2">⬡ AI Governance Ready</div>
+
+      <div class="risk-card">
+        <div class="risk-card-header">
+          <div class="risk-card-dots">
+            <span class="rcd-1"></span>
+            <span class="rcd-2"></span>
+            <span class="rcd-3"></span>
+          </div>
+          <span class="risk-card-label">IDR Risk Dashboard</span>
+        </div>
+        <div class="risk-card-body">
+          <!-- Gauges -->
+          <div class="gauge-row">
+            <span class="gauge-label">Cyber Risk</span>
+            <div class="gauge-track">
+              <div class="gauge-fill" data-width="78" style="background:linear-gradient(90deg,#ff6500,#ff8533)"></div>
+            </div>
+            <span class="gauge-val">78%</span>
+          </div>
+          <div class="gauge-row">
+            <span class="gauge-label">AI Risk</span>
+            <div class="gauge-track">
+              <div class="gauge-fill" data-width="64" style="background:linear-gradient(90deg,#4a9eff,#66b2ff)"></div>
+            </div>
+            <span class="gauge-val">64%</span>
+          </div>
+          <div class="gauge-row">
+            <span class="gauge-label">Tech Risk</span>
+            <div class="gauge-track">
+              <div class="gauge-fill" data-width="51" style="background:linear-gradient(90deg,#28c840,#44e058)"></div>
+            </div>
+            <span class="gauge-val">51%</span>
+          </div>
+          <div class="gauge-row">
+            <span class="gauge-label">Compliance</span>
+            <div class="gauge-track">
+              <div class="gauge-fill" data-width="89" style="background:linear-gradient(90deg,#febc2e,#ffd060)"></div>
+            </div>
+            <span class="gauge-val">89%</span>
+          </div>
+
+          <!-- Status grid -->
+          <div class="status-grid">
+            <div class="status-item">
+              <div class="status-name">NIST CSF</div>
+              <span class="status-badge s-green">
+                <span class="dot"></span>Aligned
+              </span>
+            </div>
+            <div class="status-item">
+              <div class="status-name">ISO 27001</div>
+              <span class="status-badge s-green">
+                <span class="dot"></span>Active
+              </span>
+            </div>
+            <div class="status-item">
+              <div class="status-name">NIS2</div>
+              <span class="status-badge s-orange">
+                <span class="dot"></span>In Review
+              </span>
+            </div>
+            <div class="status-item">
+              <div class="status-name">AI Act</div>
+              <span class="status-badge s-blue">
+                <span class="dot"></span>Monitoring
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================================================================
+     TICKER
+================================================================ -->
+<div class="ticker-section" aria-hidden="true">
+  <div class="ticker-track">
+    <!-- doubled for seamless loop -->
+    <span class="ticker-item"><span>→</span>Digital Risk</span>
+    <span class="ticker-item"><span>→</span>Cyber Security</span>
+    <span class="ticker-item"><span>→</span>AI Governance</span>
+    <span class="ticker-item"><span>→</span>ISO 27001</span>
+    <span class="ticker-item"><span>→</span>NIST Framework</span>
+    <span class="ticker-item"><span>→</span>NIS2 Directive</span>
+    <span class="ticker-item"><span>→</span>Technology Risk</span>
+    <span class="ticker-item"><span>→</span>Industry Training</span>
+    <span class="ticker-item"><span>→</span>Risk Deployment</span>
+    <span class="ticker-item"><span>→</span>UK University Partner</span>
+    <span class="ticker-item"><span>→</span>Digital Risk</span>
+    <span class="ticker-item"><span>→</span>Cyber Security</span>
+    <span class="ticker-item"><span>→</span>AI Governance</span>
+    <span class="ticker-item"><span>→</span>ISO 27001</span>
+    <span class="ticker-item"><span>→</span>NIST Framework</span>
+    <span class="ticker-item"><span>→</span>NIS2 Directive</span>
+    <span class="ticker-item"><span>→</span>Technology Risk</span>
+    <span class="ticker-item"><span>→</span>Industry Training</span>
+    <span class="ticker-item"><span>→</span>Risk Deployment</span>
+    <span class="ticker-item"><span>→</span>UK University Partner</span>
+  </div>
+</div>
+
+<!-- ================================================================
+     ABOUT
+================================================================ -->
+<section id="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <div class="about-grid">
+
+      <div class="about-left">
+        <span class="label-tag" data-reveal>About IDR</span>
+        <h2 class="section-title" id="about-title" data-reveal data-delay="1">
+          WHERE<br/>RIGOUR<br/>MEETS<br/>PRACTICE.
+        </h2>
+      </div>
+
+      <div class="about-right" data-reveal data-delay="2">
+        <div class="about-body">
+          <p>
+            The <strong>Institute of Digital Risk</strong> is an industry-led training
+            and deployment institute specialising in digital, cyber and technology risk.
+            We exist to close the critical gap between theoretical knowledge and the
+            operational realities of high-consequence, regulated environments.
+          </p>
+          <p>
+            Through a <strong>UK university partnership</strong>, IDR delivers programmes
+            built on cutting-edge research and validated by senior industry practitioners.
+            Every graduate is deployment-ready on day one — equipped with the frameworks,
+            tools and professional judgement that organisations in financial services,
+            critical infrastructure and beyond demand.
+          </p>
+        </div>
+
+        <div class="about-badge" data-reveal data-delay="3">
+          <span class="badge-icon" aria-hidden="true">🏛️</span>
+          <p><strong>UK Academic Partnership:</strong> Accredited programmes co-developed with a leading UK university — research-grounded, industry-validated.</p>
+        </div>
+
+        <!-- Stats grid -->
+        <div class="stat-grid" style="margin-top:48px" data-reveal data-delay="3">
+          <div class="stat-cell">
+            <div class="stat-num" data-count-to="100" data-count-suffix="%">0%</div>
+            <div class="stat-desc">Industry-designed<br/>curriculum</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">Day 1</div>
+            <div class="stat-desc">Deployment-ready<br/>graduates</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num" data-count-to="3" data-count-suffix="">0</div>
+            <div class="stat-desc">Service pillars<br/>fully integrated</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">UK+</div>
+            <div class="stat-desc">Global framework<br/>alignment</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- ================================================================
+     PIPELINE
+================================================================ -->
+<section id="pipeline" aria-labelledby="pipeline-title">
+  <div class="wrap">
+    <div class="pipeline-header">
+      <div>
+        <span class="label-tag" data-reveal>The IDR Model</span>
+        <h2 class="section-title" id="pipeline-title" data-reveal data-delay="1">
+          THE<br/>PIPELINE.
+        </h2>
+      </div>
+      <div data-reveal data-delay="2">
+        <p class="body-lg">
+          A joined-up pathway from education to employment —
+          uniquely designed to serve students, practitioners
+          and organisations simultaneously.
+        </p>
+      </div>
+    </div>
+
+    <div class="pipeline-steps" data-reveal>
+      <div class="pipeline-step">
+        <div class="pipeline-step-num">01</div>
+        <div class="pipeline-step-icon" aria-hidden="true">🎓</div>
+        <h3>Train</h3>
+        <p>Intensive bootcamps and structured programmes in cyber, AI and technology risk. Aligned to NIST, ISO 27001 and NIS2.</p>
+        <div class="pipeline-step-bar" aria-hidden="true"></div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-step-num">02</div>
+        <div class="pipeline-step-icon" aria-hidden="true">🤝</div>
+        <h3>Hire</h3>
+        <p>Direct placement of vetted graduates into regulated environments. Assessment-backed and practice-ready from day one.</p>
+        <div class="pipeline-step-bar" aria-hidden="true"></div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-step-num">03</div>
+        <div class="pipeline-step-icon" aria-hidden="true">⚗️</div>
+        <h3>Innovate</h3>
+        <p>Developing proprietary IP, future risk models and AI governance frameworks through live academic and industry projects.</p>
+        <div class="pipeline-step-bar" aria-hidden="true"></div>
+      </div>
+      <div class="pipeline-step">
+        <div class="pipeline-step-num">04</div>
+        <div class="pipeline-step-icon" aria-hidden="true">🚀</div>
+        <h3>Deploy</h3>
+        <p>Embedding practitioners into client organisations with ongoing CPD, community access and practitioner support networks.</p>
+        <div class="pipeline-step-bar" aria-hidden="true"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================================================================
+     SERVICES
+================================================================ -->
+<section id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="services-intro">
+      <div>
+        <span class="label-tag" data-reveal>Service Pillars</span>
+        <h2 class="section-title" id="services-title" data-reveal data-delay="1">
+          THREE<br/>PILLARS.
+        </h2>
+      </div>
+      <div data-reveal data-delay="2">
+        <p class="body-lg">
+          Three integrated pillars — one unified mission: to build, sustain and advance
+          a world-class community of digital risk professionals.
+        </p>
+      </div>
+    </div>
+
+    <div class="services-grid" data-reveal data-delay="1">
+
+      <!-- Academy -->
+      <article class="service-card">
+        <div class="card-watermark" aria-hidden="true">01</div>
+        <div class="card-tag">01 / Academy</div>
+        <div class="card-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3L2 9l10 6 10-6-10-6z"/><path d="M2 9v7"/><path d="M22 9v7"/><path d="M6 11v6l6 3 6-3v-6"/>
+          </svg>
+        </div>
+        <h3>Academy</h3>
+        <p>Structured training programmes and intensive bootcamps for students and working professionals. Covering digital risk fundamentals through to advanced AI governance and cyber resilience — fully aligned to global regulatory frameworks.</p>
+        <div class="card-pills">
+          <span class="pill">Bootcamps</span>
+          <span class="pill">CPD</span>
+          <span class="pill">Cohort Learning</span>
+          <span class="pill">Certifications</span>
+          <span class="pill">Graduate Track</span>
+        </div>
+      </article>
+
+      <!-- Innovation -->
+      <article class="service-card">
+        <div class="card-watermark" aria-hidden="true">02</div>
+        <div class="card-tag">02 / Innovation & Incubation</div>
+        <div class="card-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
+          </svg>
+        </div>
+        <h3>Innovation</h3>
+        <p>Developing proprietary IP, future-facing risk models and AI governance frameworks. Our innovation lab partners with academics and practitioners to build the intelligence tools that regulated organisations will rely on tomorrow.</p>
+        <div class="card-pills">
+          <span class="pill">AI Governance</span>
+          <span class="pill">IP Development</span>
+          <span class="pill">Risk Modelling</span>
+          <span class="pill">Research</span>
+        </div>
+      </article>
+
+      <!-- Advisory -->
+      <article class="service-card">
+        <div class="card-watermark" aria-hidden="true">03</div>
+        <div class="card-tag">03 / Advisory Services</div>
+        <div class="card-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 12h6M9 16h6M9 8h6M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z"/>
+          </svg>
+        </div>
+        <h3>Advisory</h3>
+        <p>Helping organisations design, implement and audit risk frameworks. From NIST and ISO 27001 to NIS2 compliance, our advisory team provides expert guidance to firms navigating an increasingly complex digital threat landscape.</p>
+        <div class="card-pills">
+          <span class="pill">NIST</span>
+          <span class="pill">ISO 27001</span>
+          <span class="pill">NIS2</span>
+          <span class="pill">Framework Audits</span>
+          <span class="pill">Assurance</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- ================================================================
+     COMMUNITY
+================================================================ -->
+<section id="community" aria-labelledby="community-title">
+  <div class="wrap">
+    <div class="community-grid">
+
+      <div class="community-left">
+        <span class="label-tag" data-reveal>Who We Serve</span>
+        <h2 class="section-title" id="community-title" data-reveal data-delay="1">
+          A RISK<br/>COMMUNITY.
+        </h2>
+        <p class="body-lg" data-reveal data-delay="2">
+          IDR exists for everyone from day-one students to senior practitioners —
+          united by a commitment to making digital systems safer and more resilient.
+        </p>
+
+        <div style="margin-top:48px" data-reveal data-delay="3">
+          <span class="label-tag" style="margin-bottom:16px;display:inline-flex">Key Sectors</span>
+          <div class="sectors-wrap" style="margin-top:16px">
+            <span class="sector-tag">Financial Services</span>
+            <span class="sector-tag">Critical Infrastructure</span>
+            <span class="sector-tag">Fintech</span>
+            <span class="sector-tag">Healthcare</span>
+            <span class="sector-tag">Government</span>
+            <span class="sector-tag">Energy</span>
+            <span class="sector-tag">Insurance</span>
+            <span class="sector-tag">Legal &amp; Compliance</span>
+            <span class="sector-tag">Defence</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="community-right" data-reveal data-delay="2">
+        <ul class="audience-stack" role="list">
+          <li class="audience-card">
+            <div class="aud-icon" aria-hidden="true">🎓</div>
+            <div>
+              <div class="aud-title">Students &amp; Graduates</div>
+              <p class="aud-desc">Entering the profession with practical skills, industry mentors and a direct pathway to employment in digital risk and cyber security roles.</p>
+            </div>
+          </li>
+          <li class="audience-card">
+            <div class="aud-icon" aria-hidden="true">📈</div>
+            <div>
+              <div class="aud-title">Early-Career Professionals</div>
+              <p class="aud-desc">Accelerating careers with structured CPD, specialist bootcamps and access to IDR's practitioner network across financial services and beyond.</p>
+            </div>
+          </li>
+          <li class="audience-card">
+            <div class="aud-icon" aria-hidden="true">🏦</div>
+            <div>
+              <div class="aud-title">Regulated Organisations</div>
+              <p class="aud-desc">Hiring deployment-ready talent, accessing advisory support and staying ahead of emerging regulatory requirements without compromising operations.</p>
+            </div>
+          </li>
+          <li class="audience-card">
+            <div class="aud-icon" aria-hidden="true">🔬</div>
+            <div>
+              <div class="aud-title">Academic Partners</div>
+              <p class="aud-desc">Collaborating on research, co-developing curriculum and contributing to IDR's innovation and IP incubation programmes.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     SOCIAL PROOF / TESTIMONIALS
+================================================================ -->
+<section id="proof" aria-labelledby="proof-title">
+  <div class="wrap">
+    <div class="proof-header">
+      <div>
+        <span class="label-tag" data-reveal>What People Say</span>
+        <h2 class="section-title" id="proof-title" data-reveal data-delay="1">
+          TRUSTED<br/>VOICES.
+        </h2>
+      </div>
+      <div data-reveal data-delay="2">
+        <p class="body-lg">
+          From students to CISOs — IDR's approach to blending academic
+          depth with operational practice resonates at every level.
+        </p>
+      </div>
+    </div>
+
+    <div class="testimonials" data-reveal data-delay="1">
+      <div class="testimonial">
+        <div class="testimonial-quote" aria-hidden="true">"</div>
+        <p class="testimonial-text">
+          IDR gave me the frameworks and the confidence to walk into a regulated
+          environment on day one. The combination of academic theory and live
+          project work is unlike anything else available.
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">S</div>
+          <div>
+            <div class="author-name">Sarah K.</div>
+            <div class="author-role">Digital Risk Analyst — Financial Services</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-quote" aria-hidden="true">"</div>
+        <p class="testimonial-text">
+          As a CISO, finding talent that genuinely understands both the technical
+          and governance dimensions of risk is rare. IDR graduates arrive knowing
+          the standards, the pressures and the practice.
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">M</div>
+          <div>
+            <div class="author-name">Marcus T.</div>
+            <div class="author-role">CISO — Critical Infrastructure</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-quote" aria-hidden="true">"</div>
+        <p class="testimonial-text">
+          IDR's Advisory team helped us build an ISO 27001-aligned framework
+          that actually fits our operations. No off-the-shelf templates — real,
+          practical guidance from practitioners who've done it before.
+        </p>
+        <div class="testimonial-author">
+          <div class="author-avatar" aria-hidden="true">P</div>
+          <div>
+            <div class="author-name">Priya R.</div>
+            <div class="author-role">Head of Risk — Fintech Firm</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Frameworks / standards -->
+    <div class="frameworks" data-reveal data-delay="2">
+      <p class="frameworks-label">Aligned to global standards &amp; frameworks</p>
+      <div class="frameworks-row">
+        <div class="framework-item">
+          NIST
+          <span class="framework-sub">CSF 2.0</span>
+        </div>
+        <div class="framework-item">
+          ISO
+          <span class="framework-sub">27001</span>
+        </div>
+        <div class="framework-item">
+          NIS2
+          <span class="framework-sub">Directive</span>
+        </div>
+        <div class="framework-item">
+          DORA
+          <span class="framework-sub">Regulation</span>
+        </div>
+        <div class="framework-item">
+          AI Act
+          <span class="framework-sub">EU 2024</span>
+        </div>
+        <div class="framework-item">
+          NCSC
+          <span class="framework-sub">UK Guidance</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================================================================
+     CONTACT
+================================================================ -->
+<section id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <div class="contact-left">
+        <span class="label-tag" data-reveal>Get in Touch</span>
+        <h2 class="section-title" id="contact-title" data-reveal data-delay="1">
+          LET'S<br/>TALK<br/>RISK.
+        </h2>
+        <p class="body-lg" data-reveal data-delay="2">
+          Whether you're looking to train, hire talent, commission
+          advisory work or explore a partnership — we want to hear from you.
+        </p>
+
+        <div data-reveal data-delay="3">
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <div class="contact-detail-text">
+              <strong>Email</strong>
+              <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ec8489808083ac88858b85988d809e859f87c285829f988598999889">[email&#160;protected]</a></span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                <circle cx="12" cy="9" r="2.5"/>
+              </svg>
+            </div>
+            <div class="contact-detail-text">
+              <strong>Location</strong>
+              <span>United Kingdom — Remote &amp; On-site</span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <div class="contact-detail-text">
+              <strong>Response Time</strong>
+              <span>Within 2 business days</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="form-wrap" data-reveal data-delay="2">
+        <h3>Register Interest</h3>
+        <p class="form-sub">Join the IDR community — tell us how we can help.</p>
+
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" placeholder="Jane" required autocomplete="given-name"/>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Smith" required autocomplete="family-name"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@organisation.com" required autocomplete="email"/>
+          </div>
+          <div class="form-group">
+            <label for="org">Organisation</label>
+            <input type="text" id="org" name="org" placeholder="Organisation name (optional)" autocomplete="organization"/>
+          </div>
+          <div class="form-group">
+            <label for="interest">I am interested in…</label>
+            <select id="interest" name="interest">
+              <option value="" disabled selected>Select an option</option>
+              <option value="academy">Academy / Training Programmes</option>
+              <option value="hiring">Hiring IDR Talent</option>
+              <option value="advisory">Advisory Services</option>
+              <option value="partnership">Academic / Industry Partnership</option>
+              <option value="innovation">Innovation &amp; Incubation</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your organisation or how we can help…"></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            Send Message
+            <svg class="arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <p class="form-note">No spam. Your data is handled per our Privacy Policy.</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================================================================
+     FOOTER
+================================================================ -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <!-- footer logo -->
+        <a href="#hero" class="nav-logo" style="display:inline-flex" aria-label="IDR Home">
+          <div class="nav-logo-mark">
+            <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="flg1" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#ff6500"/><stop offset="100%" stop-color="#ff8533"/>
+                </linearGradient>
+                <linearGradient id="flg2" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#cc5200"/><stop offset="100%" stop-color="#993d00"/>
+                </linearGradient>
+                <linearGradient id="flg3" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#ff7219"/><stop offset="100%" stop-color="#e05c00"/>
+                </linearGradient>
+              </defs>
+              <polygon points="40,12 12,27 12,53 40,68 40,42" fill="url(#flg3)"/>
+              <polygon points="40,12 68,27 68,53 40,68 40,42" fill="url(#flg2)"/>
+              <polygon points="40,12 12,27 40,42 68,27" fill="url(#flg1)"/>
+              <circle cx="40" cy="38" r="3" fill="white" opacity="0.8"/>
+            </svg>
+          </div>
+          <div class="nav-logo-text">
+            <span class="logo-abbr">IDR</span>
+            <span class="logo-full">Institute of Digital Risk</span>
+          </div>
+        </a>
+        <p class="footer-brand-desc">
+          Training, deploying and developing the digital risk practitioners of tomorrow. Industry-led. Academically grounded. Operationally proven.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Programmes</h4>
+        <ul>
+          <li><a href="#services">Academy Bootcamps</a></li>
+          <li><a href="#services">CPD Courses</a></li>
+          <li><a href="#services">Graduate Track</a></li>
+          <li><a href="#services">Executive Education</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Services</h4>
+        <ul>
+          <li><a href="#services">Advisory</a></li>
+          <li><a href="#services">Innovation Lab</a></li>
+          <li><a href="#services">Talent Placement</a></li>
+          <li><a href="#services">Framework Audits</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">Organisation</h4>
+        <ul>
+          <li><a href="#about">About IDR</a></li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2024 Institute of Digital Risk. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#contact">Privacy Policy</a>
+        <a href="#contact">Terms of Use</a>
+        <a href="#contact">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ================================================================
+     JAVASCRIPT
+================================================================ -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(function(){
+'use strict';
+
+/* ── Custom cursor ───────────────────────────────────────────── */
+const cursor     = document.getElementById('cursor');
+const cursorRing = document.getElementById('cursor-ring');
+let mouseX = 0, mouseY = 0;
+let ringX  = 0, ringY  = 0;
+let cursorStarted = false;
+
+const hasFineMouse = window.matchMedia('(pointer:fine)').matches;
+
+if (hasFineMouse) {
+  // Hide native cursor only when we confirm fine pointer
+  document.documentElement.style.cursor = 'none';
+  document.body.style.cursor = 'none';
+
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    if (!cursorStarted) {
+      cursorStarted = true;
+      ringX = mouseX; ringY = mouseY;
+      cursor.style.opacity     = '1';
+      cursorRing.style.opacity = '1';
+    }
+
+    cursor.style.left = mouseX + 'px';
+    cursor.style.top  = mouseY + 'px';
+  }, { passive: true });
+
+  document.addEventListener('mouseleave', () => {
+    cursor.style.opacity = '0';
+    cursorRing.style.opacity = '0';
+  });
+  document.addEventListener('mouseenter', () => {
+    if (cursorStarted) {
+      cursor.style.opacity = '1';
+      cursorRing.style.opacity = '1';
+    }
+  });
+
+  document.addEventListener('mouseover', e => {
+    if (e.target.closest('a, button')) document.body.classList.add('cursor-hover');
+  });
+  document.addEventListener('mouseout', e => {
+    if (e.target.closest('a, button')) document.body.classList.remove('cursor-hover');
+  });
+
+  (function tickRing() {
+    ringX += (mouseX - ringX) * 0.1;
+    ringY += (mouseY - ringY) * 0.1;
+    cursorRing.style.left = ringX + 'px';
+    cursorRing.style.top  = ringY + 'px';
+    requestAnimationFrame(tickRing);
+  })();
+}
+
+/* ── Navbar scroll state ─────────────────────────────────────── */
+const navbar = document.getElementById('navbar');
+function onScroll() {
+  navbar.classList.toggle('scrolled', window.scrollY > 20);
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+/* ── Active nav link on scroll ───────────────────────────────── */
+const sections  = document.querySelectorAll('section[id]');
+const navLinks  = document.querySelectorAll('.nav-link');
+
+const sectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(l => {
+        l.classList.toggle('active', l.getAttribute('href') === '#'+e.target.id);
+      });
+    }
+  });
+}, { threshold: 0.35 });
+
+sections.forEach(s => sectionObserver.observe(s));
+
+/* ── Hamburger mobile nav ────────────────────────────────────── */
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+
+hamburger.addEventListener('click', () => {
+  const open = mobileNav.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
+
+document.querySelectorAll('[data-mobile-link]').forEach(el => {
+  el.addEventListener('click', () => {
+    mobileNav.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  });
+});
+
+/* ── Scroll Reveal ────────────────────────────────────────────── */
+document.body.classList.add('js-ready');
+
+// Fallback: if observer never fires within 3s, show everything
+const revealFallback = setTimeout(() => {
+  document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('is-visible'));
+}, 3000);
+
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const delay = (parseFloat(e.target.dataset.delay || 0)) * 100;
+      // Set transition-delay inline so it wins over CSS
+      e.target.style.transitionDelay = delay + 'ms';
+      setTimeout(() => e.target.classList.add('is-visible'), delay);
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
+
+document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+
+// Clear fallback once first reveal fires
+const firstReveal = document.querySelector('[data-reveal]');
+if (firstReveal) {
+  const clearFallback = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) { clearTimeout(revealFallback); clearFallback.disconnect(); }
+  }, { threshold: 0.05 });
+  clearFallback.observe(firstReveal);
+}
+
+/* ── Animated counter ────────────────────────────────────────── */
+function animateCounter(el) {
+  const target   = parseInt(el.dataset.countTo, 10);
+  const suffix   = el.dataset.countSuffix || '';
+  const duration = 1800;
+  const start    = performance.now();
+
+  function step(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased    = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+    const current  = Math.round(eased * target);
+    el.textContent = current + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+const counterObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting && e.target.dataset.countTo) {
+      animateCounter(e.target);
+      counterObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('[data-count-to]').forEach(el => counterObserver.observe(el));
+
+/* ── Gauge bar animations ────────────────────────────────────── */
+const gaugeObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.gauge-fill').forEach(fill => {
+        fill.style.width = fill.dataset.width + '%';
+      });
+      gaugeObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.4 });
+
+const riskCard = document.querySelector('.risk-card');
+if (riskCard) gaugeObserver.observe(riskCard);
+
+/* ── Hero canvas: animated network graph ─────────────────────── */
+const canvas = document.getElementById('hero-canvas');
+const ctx    = canvas.getContext('2d');
+let W, H, nodes, animId;
+
+function resize() {
+  W = canvas.width  = canvas.offsetWidth;
+  H = canvas.height = canvas.offsetHeight;
+}
+
+function createNodes(count) {
+  return Array.from({ length: count }, () => ({
+    x:  Math.random() * W,
+    y:  Math.random() * H,
+    vx: (Math.random() - 0.5) * 0.4,
+    vy: (Math.random() - 0.5) * 0.4,
+    r:  Math.random() * 1.5 + 0.5,
+  }));
+}
+
+function drawNetwork() {
+  ctx.clearRect(0, 0, W, H);
+  const MAX_DIST = 160;
+
+  // Update & draw nodes
+  for (let i = 0; i < nodes.length; i++) {
+    const n = nodes[i];
+    n.x += n.vx;
+    n.y += n.vy;
+    if (n.x < 0 || n.x > W) n.vx *= -1;
+    if (n.y < 0 || n.y > H) n.vy *= -1;
+
+    ctx.beginPath();
+    ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(255,101,0,0.55)';
+    ctx.fill();
+  }
+
+  // Draw connections
+  for (let i = 0; i < nodes.length; i++) {
+    for (let j = i + 1; j < nodes.length; j++) {
+      const dx   = nodes[i].x - nodes[j].x;
+      const dy   = nodes[i].y - nodes[j].y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < MAX_DIST) {
+        const alpha = (1 - dist / MAX_DIST) * 0.18;
+        ctx.beginPath();
+        ctx.moveTo(nodes[i].x, nodes[i].y);
+        ctx.lineTo(nodes[j].x, nodes[j].y);
+        ctx.strokeStyle = `rgba(255,101,0,${alpha})`;
+        ctx.lineWidth   = 0.8;
+        ctx.stroke();
+      }
+    }
+  }
+  animId = requestAnimationFrame(drawNetwork);
+}
+
+function initCanvas() {
+  if (animId) cancelAnimationFrame(animId);
+  resize();
+  const count = Math.floor((W * H) / 18000);
+  nodes = createNodes(Math.min(count, 80));
+  drawNetwork();
+}
+
+window.addEventListener('resize', () => {
+  clearTimeout(window._resizeTimer);
+  window._resizeTimer = setTimeout(initCanvas, 200);
+}, { passive: true });
+
+initCanvas();
+
+/* ── Text scramble on hero headline ──────────────────────────── */
+const scrambleEl = document.getElementById('scramble-text');
+if (scrambleEl) {
+  const chars   = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  const target  = scrambleEl.textContent;
+  let   frame   = 0;
+  let   resolved = 0;
+  const TOTAL   = 28;
+
+  function scramble() {
+    let output = '';
+    for (let i = 0; i < target.length; i++) {
+      if (i < resolved) {
+        output += target[i];
+      } else {
+        output += chars[Math.floor(Math.random() * chars.length)];
+      }
+    }
+    scrambleEl.textContent = output;
+    frame++;
+    if (frame % 3 === 0 && resolved < target.length) resolved++;
+    if (resolved < target.length + 3) requestAnimationFrame(scramble);
+    else scrambleEl.textContent = target;
+  }
+
+  setTimeout(() => requestAnimationFrame(scramble), 600);
+}
+
+/* ── Form submit handler ─────────────────────────────────────── */
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const btn  = this.querySelector('.form-submit');
+  const orig = btn.innerHTML;
+
+  btn.innerHTML  = 'Sent — We\'ll be in touch ✓';
+  btn.style.background   = '#28c840';
+  btn.style.borderColor  = '#28c
