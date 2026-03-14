@@ -1,5 +1,3 @@
-![Lighthouse Scores](https://idr-website-eight.vercel.app/images/lighthouse-scores.png)
-
 # About This Project — For Recruiters & Hiring Managers
 
 If you've landed here through my GitHub, portfolio or a referral — welcome. This file exists to give you context on what this project is, why I built it, and what it says about my skills.
@@ -56,6 +54,19 @@ Beyond the brief requirements, I made deliberate decisions to go further — not
 - `prefers-reduced-motion` respected throughout
 
 ---
+
+## Lighthouse Audit — Incognito, Mobile
+
+![Lighthouse Scores](images/lighthouse-scores.png)
+
+| Category       | Score |
+| -------------- | ----- |
+| Performance    | 92    |
+| Accessibility  | 100   |
+| Best Practices | 100   |
+| SEO            | 100   |
+
+Audited on mobile in incognito mode — no extensions interference.
 
 ## Why I'm Telling You This
 
