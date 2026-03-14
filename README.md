@@ -22,7 +22,7 @@ idr-production/
 ## Deploy to Vercel
 
 ### Option A — Drag & Drop (30 seconds)
-1. Go to [vercel.com](https://vercel.com) → log in
+1. Go to https://idr-website-eight.vercel.app/ → log in
 2. Click **Add New Project** → **Browse**
 3. Select the `idr-production` folder
 4. Click **Deploy**

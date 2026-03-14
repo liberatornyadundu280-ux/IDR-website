@@ -493,3 +493,76 @@ footer { background: var(--c-bg); border-top: 1px solid var(--c-border); padding
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
   [data-reveal], [data-reveal].is-visible { opacity: 1 !important; transform: none !important; }
 }
+
+/* Skip to content — screen readers + keyboard users */
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 24px;
+  z-index: 9999;
+  background: var(--c-orange);
+  color: var(--c-white);
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: var(--r);
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 24px;
+}
+
+/* Keyboard focus ring — visible only when using keyboard (not mouse) */
+:focus { outline: none; }
+
+:focus-visible {
+  outline: 2px solid var(--c-orange);
+  outline-offset: 3px;
+  border-radius: var(--r);
+}
+
+/* Specific elements need slightly different treatment */
+.nav-link:focus-visible,
+.nav-logo:focus-visible,
+.footer-col a:focus-visible,
+.mobile-nav-link:focus-visible {
+  outline: 2px solid var(--c-orange);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--c-white);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(255,101,0,0.4);
+}
+
+.form-submit:focus-visible {
+  outline: 2px solid var(--c-white);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(255,101,0,0.4);
+}
+
+.form-group input:focus-visible,
+.form-group select:focus-visible,
+.form-group textarea:focus-visible {
+  outline: none; /* already styled via border + box-shadow in form rules */
+}
+
+.sector-tag:focus-visible,
+.audience-card:focus-visible,
+.framework-item:focus-visible {
+  outline: 2px solid var(--c-orange);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.hamburger:focus-visible {
+  outline: 2px solid var(--c-orange);
+  outline-offset: 6px;
+  border-radius: 4px;
+}
+
