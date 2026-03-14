@@ -1,3 +1,5 @@
+![Lighthouse Scores](https://idr-website-eight.vercel.app/images/lighthouse-scores.png)
+
 # About This Project — For Recruiters & Hiring Managers
 
 If you've landed here through my GitHub, portfolio or a referral — welcome. This file exists to give you context on what this project is, why I built it, and what it says about my skills.
@@ -32,11 +34,13 @@ That last constraint is the important one. It's easy to build a polished site wi
 Beyond the brief requirements, I made deliberate decisions to go further — not to show off, but because I understood what the project needed:
 
 **Design**
+
 - Dark editorial aesthetic — chosen because IDR operates in regulated, high-consequence environments. The design needed to communicate authority and credibility, not approachability
 - Custom isometric cube logo — built in SVG, multi-size favicon from 16px to 256px
 - Bebas Neue + Manrope + JetBrains Mono type system — chosen specifically to signal technical precision without feeling cold
 
 **Front-End Engineering**
+
 - Animated HTML5 Canvas network graph in the hero — written from scratch, runs on a single `requestAnimationFrame` loop with proper resize handling and `cancelAnimationFrame` cleanup
 - Custom cursor with a lagging ring follower — two separate `rAF` loops, correct lerp implementation, only activates on `pointer:fine` devices
 - Text scramble effect on the hero headline — pure JS, no library
@@ -44,6 +48,7 @@ Beyond the brief requirements, I made deliberate decisions to go further — not
 - Counter animations using ease-out cubic easing on `rAF` — not `setInterval`, not a library
 
 **Production Standards**
+
 - Proper file separation — `index.html`, `css/style.css`, `js/main.js`, `images/`
 - `vercel.json` with HTTP security headers (`X-Frame-Options`, `X-Content-Type-Options`, `X-XSS-Protection`, `Referrer-Policy`) and 1-year cache on static assets
 - Open Graph and Twitter Card meta tags — branded 1200×630 social preview image
@@ -80,4 +85,4 @@ Reach me through GitHub or via the contact details on my profile.
 
 ---
 
-*This project was completed as part of a competitive internship selection process. The brief, constraints and deliverables were set by the hiring organisation. The implementation, design decisions and production standards are entirely my own work.*
+_This project was completed as part of a competitive internship selection process. The brief, constraints and deliverables were set by the hiring organisation. The implementation, design decisions and production standards are entirely my own work._
